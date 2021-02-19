@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	/*  Estructuras de Control: For (único) => No existe while, do while
+	/*  Estructuras de Control: For (único) => No existe while, do wh
 	 	Imprimir los numeros del 1 al 5
 		fmt.Println("1")
 	 	fmt.Println("2")
