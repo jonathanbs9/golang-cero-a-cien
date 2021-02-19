@@ -68,5 +68,4 @@ func main() {
 	default:
 		fmt.Println("Por lo menos es un Numero XD")
 	}*/
-
 }
