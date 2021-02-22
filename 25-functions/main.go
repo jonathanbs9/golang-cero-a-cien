@@ -4,78 +4,39 @@ import (
 	"fmt"
 )
 
-//Closure
+//Declarar Funciones 1
 
-func print(cadena string) {
-	fmt.Println(cadena)
+func imprimirNombre(nombre string) {
+	fmt.Println("Fuera de Main")
+	fmt.Println("El nombre es: ", nombre)
 }
 
-func print2(cadena string) {
-	fmt.Println(cadena)
-}
-func print3(cadena1, cadena2 string) {
-	fmt.Println(cadena1 + cadena2)
+//Declarar Funciones 2
+func suma(n1 int, n2 int) int {
+	return n1 + n2
 }
 
-// func print4(fprint func(string)) {
-// 	fprint("Hola Mundo desde Print4")
-//
-// }
-
-func incremementar() func() int {
-	i := 0
-	return func() (r int) {
-		r = i
-		i += 2
-		return
-	}
-}
-
-func incremento() {
-	i := 0
-	i++
-	fmt.Println(i)
+//Declarar Funciones 3
+func resta(n1, n2 int) (r int) {
+	r = n1 - n2
+	return
 }
 
 func main() {
+	//Funciones
 
-	cadena := "Hola Mundo"
+	//Llamar una Funcion
+	imprimirNombre("Jose")
+	fmt.Println("Dentro de main")
 
-	imprimir := print
+	fmt.Println(suma(25, 66))
+	fmt.Println(resta(88, 66))
+	//
+	//Firma de una funcion
+	fmt.Printf("Funcion suma: %T\n", suma)
+	fmt.Printf("Funcion resta: %T\n", resta)
 
-	imprimir(cadena)
-
-	imprimir2 := func() {
-		fmt.Println(cadena)
-	}
-	imprimir2()
-
-	imprimir = print2
-	imprimir("Hola Mundo 2")
-
-	//imprimir = print3
-
-	fmt.Printf("Funcion print1: %T\n", print)
-	fmt.Printf("Funcion print2: %T\n", print2)
-	fmt.Printf("Funcion print3: %T\n", print3)
-
-	//print4(print)
-
-	//Las funciones son comparables con nil
-	var fb func()
-	if fb == nil {
-		fmt.Println("fb es igual a nil")
-	}
-
-	inc := incremementar()
-
-	fmt.Println("Valor de i: ", inc())
-	fmt.Println("Valor de i: ", inc())
-	fmt.Println("Valor de i: ", inc())
-	fmt.Println("Valor de i: ", inc())
-
-	incremento()
-	incremento()
-	incremento()
+	//package math
+	//func Sin(x float64) float64 // implemented in assembly language
 
 }
